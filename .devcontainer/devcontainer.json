@@ -2,23 +2,21 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/codespaces-linux
 {
 	"name": "GitHub Codespaces (Default)",
-
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": ".."
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/nvidia-cuda:1": { 
-		  "installCudnn": true
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
+			"installCudnn": true
 		}
-	  },
-
+	},
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
-			"settings": { 
+			"settings": {
 				"go.toolsManagement.checkForUpdates": "local",
 				"go.useLanguageServer": true,
 				"go.gopath": "/go",
@@ -39,7 +37,6 @@
 					"**/target/**": true
 				}
 			},
-			
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"GitHub.vscode-pull-request-github",
@@ -51,17 +48,16 @@
 				"ms-toolsai.jupyter-renderers",
 				"ms-python.vscode-pylance",
 				"ms-python.python",
-				"ms-vscode.makefile-tools"
+				"ms-vscode.makefile-tools",
+				"aws-scripting-guy.codedeploy-blue-green"
 			]
 		}
 	},
-
 	"remoteUser": "codespace",
-
 	"overrideCommand": false,
-
-	"mounts": ["source=codespaces-linux-var-lib-docker,target=/var/lib/docker,type=volume"],
-
+	"mounts": [
+		"source=codespaces-linux-var-lib-docker,target=/var/lib/docker,type=volume"
+	],
 	"runArgs": [
 		"--cap-add=SYS_PTRACE",
 		"--security-opt",
@@ -69,11 +65,9 @@
 		"--privileged",
 		"--init"
 	],
-	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// "oryx build" will automatically install your dependencies and attempt to build your project
 	//"postCreateCommand": "oryx build -p virtualenv_name=.venv --log-file /tmp/oryx-build.log --manifest-dir /tmp || echo 'Could not auto-build. Skipping.'"
-	 "postCreateCommand": "bash setup.sh"
+	"postCreateCommand": "bash setup.sh"
 }
