@@ -9,8 +9,6 @@ RUN apt-get update && apt-get -y install --no-install-recommends \
    python3.8-venv \
    gcc 
 
-RUN az extension add --name aws-toolkit-vscode
-
 
 ARG USER="codespace"
 ARG VENV_PATH="/home/${USER}/venv"

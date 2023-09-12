@@ -49,7 +49,6 @@
 				"ms-python.vscode-pylance",
 				"ms-python.python",
 				"ms-vscode.makefile-tools",
-				"aws-scripting-guy.codedeploy-blue-green"
 			]
 		}
 	},
