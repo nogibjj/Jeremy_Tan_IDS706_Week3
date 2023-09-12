@@ -13,7 +13,7 @@ example_csv = "https://raw.githubusercontent.com/fivethirtyeight/data/master/con
 
 
 def test_general_describe():
-    """Function calling describe_iris and general_describe which tests different parts of
+    """Function calling general_describe which tests different parts of
     the dataset"""
 
     # only works for the example_csv link
