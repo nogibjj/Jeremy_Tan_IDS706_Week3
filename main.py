@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from ydata_profiling import ProfileReport
 import polars as pl
-import numpy as np
 
 
 def general_polars_describe(csv):
