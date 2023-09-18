@@ -15,5 +15,4 @@ polars
 matplotlib
 ydata_profiling
 pandas
-
-
+numpy
