@@ -9,6 +9,7 @@ from main import (
     generate_general_markdown,
 )
 
+
 example_csv = "https://raw.githubusercontent.com/fivethirtyeight/data/master/congress-age/congress-terms.csv"
 
 
@@ -41,6 +42,6 @@ def test_markdown_file():
 
 
 if __name__ == "__main__":
-    # test_general_describe()
+    test_general_describe()
     # test_viz_general()
-    test_markdown_file()
+    # test_markdown_file()
