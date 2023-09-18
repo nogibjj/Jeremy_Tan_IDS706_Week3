@@ -5,7 +5,6 @@ Test goes here
 
 from main import (
     generate_vis_general_polars_congress,
-    generate_summary,
     general_polars_describe,
     generate_general_markdown,
 )
@@ -35,11 +34,6 @@ def test_viz_general():
     generate_vis_general_polars_congress(example_csv)
 
 
-def test_generate_summary_report():
-    """Function calling generate_summary()"""
-    generate_summary(example_csv)
-
-
 def test_markdown_file():
     """Function that generates markdown file"""
     generate_vis_general_polars_congress(example_csv)
@@ -49,5 +43,4 @@ def test_markdown_file():
 if __name__ == "__main__":
     # test_general_describe()
     # test_viz_general()
-    # test_generate_summary_report()
     test_markdown_file()
